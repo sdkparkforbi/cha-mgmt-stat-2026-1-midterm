@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>경영통계 중간평가 — 해설지</title>
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="CHA AI Healthcare · 경영통계">
+<meta property="og:title" content="경영통계 중간평가 — 해설지">
+<meta property="og:description" content="경영통계 (2026-1) 중간평가 1차·2차 해설지. 정답·풀이 해설·정답 키 포함.">
+<meta property="og:url" content="https://sdkparkforbi.github.io/cha-mgmt-stat-2026-1-midterm/solutions.html">
+<meta property="og:image" content="https://sdkparkforbi.github.io/cha-mgmt-stat-2026-1-midterm/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="경영통계 중간평가 — 해설지">
+<meta name="twitter:description" content="경영통계 (2026-1) 중간평가 1차·2차 해설지. 정답·풀이 해설·정답 키 포함.">
+<meta name="twitter:image" content="https://sdkparkforbi.github.io/cha-mgmt-stat-2026-1-midterm/og-image.png">
+<meta name="description" content="경영통계 (2026-1) 중간평가 1차·2차 해설지. 정답·풀이 해설·정답 키 포함.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fafaf7; --paper:#ffffff; --ink:#1a1a1a; --ink-soft:#4a4a4a;
+  --muted:#8a8a85; --rule:#e6e3da; --accent:#1f4e5f; --accent-soft:#d9e3e6;
+  --correct:#1f6f43; --correct-bg:#e8f3ec; --warn:#8a5a1a;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);}
+body{
+  font-family:"Pretendard","Noto Sans KR","Apple SD Gothic Neo",-apple-system,BlinkMacSystemFont,sans-serif;
+  font-size:16px; line-height:1.7; -webkit-font-smoothing:antialiased;
+}
+
+.page{
+  max-width:780px; margin:0 auto; padding:56px 32px 96px;
+  background:var(--paper); min-height:100vh; box-shadow:0 0 40px rgba(0,0,0,.04);
+}
+.topnav{
+  margin-bottom: 32px; font-size: 13px;
+}
+.topnav a{
+  color: var(--muted); text-decoration:none; border-bottom: 1px dotted var(--muted);
+}
+.topnav a:hover{ color: var(--accent); border-bottom-color: var(--accent);}
+.eyebrow{
+  font-family:"Noto Serif KR",serif; font-size:12px; letter-spacing:.22em;
+  color:var(--accent); text-transform:uppercase; font-weight:600; margin-bottom:12px;
+}
+h1{
+  font-family:"Noto Serif KR","Nanum Myeongjo",serif; font-size:34px; line-height:1.25;
+  margin:0 0 6px; letter-spacing:-0.01em; font-weight:700;
+}
+.subtitle{ color:var(--ink-soft); font-size:15px; margin-bottom:28px; }
+.meta{
+  display:flex; flex-wrap:wrap; gap:16px; padding:14px 18px;
+  border:1px solid var(--rule); border-radius:4px; margin-bottom:40px;
+  background:#fdfcf8; font-size:13.5px;
+}
+.meta dt{ color:var(--muted); margin-right:6px; display:inline; font-weight:500;}
+.meta dd{ display:inline; margin:0 18px 0 0; color:var(--ink); font-weight:500;}
+.meta dl{ margin:0; display:flex; flex-wrap:wrap; gap:4px 0;}
+.section-head{ margin:48px 0 24px; padding-bottom:14px; border-bottom:2px solid var(--accent);}
+.section-head .tag{ font-family:"Noto Serif KR",serif; font-size:11px; letter-spacing:.25em; color:var(--accent); font-weight:700;}
+.section-head h2{ font-family:"Noto Serif KR",serif; font-size:24px; margin:4px 0 0; font-weight:700;}
+.q{ margin:28px 0 36px; page-break-inside:avoid; }
+.q-num{ display:inline-block; font-family:"Noto Serif KR",serif; font-size:13px; color:var(--accent); font-weight:700; letter-spacing:.08em; margin-bottom:6px;}
+.q-title{ font-weight:700; font-size:16px; margin:0 0 14px; color:var(--ink);}
+.q-body{ font-size:15.5px; color:var(--ink);}
+.q-body p{ margin:0 0 10px; }
+.q-body b, .q-body strong{ font-weight:700; color:var(--ink);}
+.choices{ list-style:none; padding:4px 0 0; margin:14px 0 0;}
+.choices li{
+  padding:9px 14px 9px 38px; margin:6px 0; position:relative;
+  border:1px solid var(--rule); border-radius:4px; background:#fdfdfb;
+  font-size:15px; line-height:1.55;
+}
+.choices li p{ margin:0; display:inline; }
+.choices li br{ display:none; }
+.choices li .mark{
+  position:absolute; left:12px; top:9px;
+  font-family:"Noto Serif KR",serif; font-weight:700; color:var(--accent);
+}
+.choices li.correct{ border-color:var(--correct); background:var(--correct-bg);}
+.choices li.correct .mark{ color:var(--correct);}
+.choices li.correct::after{
+  content:"정답"; position:absolute; right:10px; top:9px;
+  font-size:11px; font-weight:700; letter-spacing:.1em; color:var(--correct);
+  background:#fff; border:1px solid var(--correct); padding:1px 7px; border-radius:999px;
+}
+.feedback{
+  margin:14px 0 0; padding:14px 16px; border-left:3px solid var(--accent);
+  background:#f4f6f5; font-size:14.5px; color:var(--ink-soft);
+}
+.feedback .lbl{
+  font-family:"Noto Serif KR",serif; font-size:11px; letter-spacing:.2em;
+  color:var(--accent); font-weight:700; display:block; margin-bottom:6px;
+}
+.feedback p{ margin:0; line-height:1.65;}
+.answer-key{
+  margin:36px 0 0; padding:18px 22px; background:#fdfcf6;
+  border:1px solid var(--rule); border-radius:4px;
+}
+.answer-key h3{ font-family:"Noto Serif KR",serif; font-size:14px; margin:0 0 10px; letter-spacing:.12em; color:var(--accent);}
+.answer-key .grid{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(78px,1fr));
+  gap:6px 12px; font-size:14px; font-variant-numeric:tabular-nums;
+}
+.answer-key .grid span b{ color:var(--accent); font-weight:700; margin-left:4px;}
+.toc{
+  margin:28px 0 0; padding:16px 20px; background:#f7f5ee;
+  border-left:3px solid var(--accent); font-size:13.5px;
+}
+.toc a{ color:var(--ink); text-decoration:none; border-bottom:1px dotted var(--muted);}
+.toc a:hover{ color:var(--accent); border-bottom-color:var(--accent);}
+.notice{
+  margin:14px 0 0; padding:12px 16px; background:#fff8e6;
+  border-left:3px solid var(--warn); font-size:13.5px; color:var(--ink-soft);
+  border-radius:0 4px 4px 0;
+}
+footer{
+  margin-top:64px; padding-top:18px; border-top:1px solid var(--rule);
+  font-size:12.5px; color:var(--muted); text-align:center;
+}
+@media print{
+  body{ background:#fff; }
+  .page{ box-shadow:none; padding:0; max-width:none;}
+  .topnav{ display:none; }
+  .q{ page-break-inside:avoid;}
+}
+@media (max-width:640px){
+  .page{ padding:36px 18px 64px;}
+  h1{ font-size:26px;}
+  .section-head h2{ font-size:20px;}
+}
+</style>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+<div class="page">
+<nav class="topnav">← <a href="index.html">목록으로</a></nav>
+<div class="eyebrow">경영통계 · 2026-1 · U004109-01</div>
+<h1>경영통계 중간평가 — 해설지</h1>
+<div class="subtitle">2026학년도 1학기 · 박대근 · 정답 및 해설 포함</div>
+<div class="meta"><dl><dt>과목</dt><dd>경영통계</dd><dt>학기</dt><dd>2026-1</dd><dt>분반</dt><dd>U004109-01</dd><dt>담당</dt><dd>박대근</dd><dt>유형</dt><dd>객관식 4지선다 · 총 40문항 (1차 20 · 2차 20)</dd></dl></div>
+<div class="toc"><b>목차</b> &nbsp;·&nbsp; <a href="#sec1">1차 중간평가</a> &nbsp;·&nbsp; <a href="#sec2">2차 중간평가</a></div>
+<section id="sec1">
+<div class="section-head">
+  <div class="tag">PART I</div>
+  <h2>1차 중간평가</h2>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 01</div>
+  <div class="q-title">01. 모집단과 모수 개념</div>
+  <div class="q-body"><p>서울시 고등학생 중 400명을 무작위로 추출하여 하루 평균 수면 시간을 조사하였다. 조사 결과 표본 평균은 6.5시간이었고, 전국 고등학생의 평균 수면 시간 \( \mu \)는 알려져 있지 않다. 다음 설명 중 <span>맞은 것을 모두 선택한 것은?&nbsp;<br></span><span><br>가. 모집단(population)</span>: 관심 대상인 개체들의 집합 — 고등학생 10만 명<br>나. 속성/확률변수: 그 개체에게서 관찰하려는 특성 — 수면 시간, 성적, 키 등 여러 개 가능<br>다. 표본(sample): 모집단에서 뽑은 일부 개체들 — 400명<br>라. 모수(parameter): 모집단에서 특정 속성의 요약값 — 수면 시간의 평균 μ<br>마. 표본통계량: 표본에서 같은 속성의 요약값 — 표본평균 6.5시간</p><br></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p><span>가,나,다,라</span></p></li>
+    <li><span class="mark">②</span><p><span>가,나,다</span></p></li>
+    <li><span class="mark">③</span><p>가,나</p></li>
+    <li class="correct"><span class="mark">④</span><p><span><span>모두</span></span></p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>모집단은 관심의 대상이 되는 집단 전체, 표본은 실제 조사된 일부(400명)이다. 모집단에서 계산되는 \( \mu \)는 모수이고, 표본에서 관찰된 6.5시간은 표본통계량이다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 02</div>
+  <div class="q-title">02. 확률변수 유형(속성)</div>
+  <div class="q-body"><p>바이오헬스케어 연구에서 관찰되는 다음 속성 중 <b>연속형 확률변수</b>에 해당하는 것은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>통증 수준(없음 / 약함 / 보통 / 강함)</p></li>
+    <li><span class="mark">②</span><p>한 달간 낙상 발생 건수</p></li>
+    <li><span class="mark">③</span><p>치료 효과 여부(효과 있음 / 효과 없음)</p></li>
+    <li class="correct"><span class="mark">④</span><p>환자의 공복 혈당 수치(mg/dL)</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>연속형은 소수점까지 의미 있는 실수값(혈압, 혈당, 체온 등)을 갖는다. 치료 효과 여부는 이진(명목) 범주형, 통증 수준은 서열형, 낙상 건수는 셀 수 있는 이산형이다. 변수 유형을 올바르게 파악하는 것이 적절한 통계 방법 선택의 첫걸음이다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 03</div>
+  <div class="q-title">03. 중심극한정리</div>
+  <div class="q-body"><p>중심극한정리(CLT)에 관한 설명 중 <b>옳지 않은 것</b>은?</p></div>
+  <ol class="choices">
+    <li class="correct"><span class="mark">①</span><p>모집단이 정규분포를 따를 때에만 CLT를 적용할 수 있다.</p></li>
+    <li><span class="mark">②</span><p>일반적으로 표본 크기가 30 이상이면 정규 근사가 성립한다고 본다.</p></li>
+    <li><span class="mark">③</span><p>표본 크기가 충분히 크면 표본 평균의 분포가 정규분포에 근사한다.</p></li>
+    <li><span class="mark">④</span><p>원래 모집단의 분포 형태에 관계없이 적용할 수 있다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>CLT의 핵심은 원래 모집단의 분포 형태가 무엇이든 상관없이, 표본 크기가 충분히 크면 표본 평균의 분포가 정규분포에 근사한다는 점이다. 모집단이 정규분포를 따라야 한다는 조건은 필요 없다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 04</div>
+  <div class="q-title">04. 신뢰구간 해석</div>
+  <div class="q-body"><p>어느 연구에서 모평균 \( \mu \)에 대한 95% 신뢰구간이 (9일, 11일)로 계산되었다. 이 구간의 해석으로 <b>가장 적절한 것</b>은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>모평균이 9일과 11일 사이에 있을 확률이 95%이다.</p></li>
+    <li><span class="mark">②</span><p>모평균이 9일 또는 11일일 확률이 각각 95%씩이다.</p></li>
+    <li class="correct"><span class="mark">③</span><p>같은 방법으로 표본을 반복 추출해 신뢰구간을 계산하면, 그중 약 95%의 구간이 실제 모평균을 포함한다.</p></li>
+    <li><span class="mark">④</span><p>표본 평균이 9일과 11일 사이에 있을 확률이 95%이다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>모집단 평균은 고정된 값이므로 "확률이 95%이다"라는 해석은 틀리다. 올바른 해석은 "같은 방법으로 표본을 반복 추출해 신뢰구간을 구할 때, 약 95%의 구간이 실제 모평균을 포함한다"이다. 변하는 것은 표본이고, 표본마다 달라지는 신뢰구간들 중 95%가 참값을 포함한다는 뜻이다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 05</div>
+  <div class="q-title">05. Z 분포 양측 95% 신뢰구간 계산</div>
+  <div class="q-body"><p>슬관절 치환술 후 보행이 가능해지기까지의 소요일수를 조사하였다. 표본 크기 \( n = 100 \), 표본평균 \( \bar{x} = 10 \)일, 모집단 표준편차 \( \sigma = 5 \)일로 알려져 있다. \( Z_{\alpha/2} = 2 \)를 사용할 때, 모평균에 대한 <b>95% 양측 신뢰구간</b>은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>(8일, 12일)</p></li>
+    <li><span class="mark">②</span><p>(5일, 15일)</p></li>
+    <li class="correct"><span class="mark">③</span><p>(9일, 11일)</p></li>
+    <li><span class="mark">④</span><p>(9.5일, 10.5일)</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>표준오차 \( SE = \sigma / \sqrt{n} = 5 / \sqrt{100} = 0.5 \). 95% 신뢰구간 \( = \bar{x} \pm Z_{\alpha/2} \cdot SE = 10 \pm 2 \times 0.5 = 10 \pm 1 \), 즉 (9일, 11일).</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 06</div>
+  <div class="q-title">06. Z 분포 단측 신뢰구간 (97.5% 상한)</div>
+  <div class="q-body"><p>표본 크기 \( n = 64 \), 표본평균 \( \bar{x} = 50 \), 모집단 표준편차 \( \sigma = 16 \)이다. 유의수준 \( \alpha = 0.025 \)의 <b>97.5%&nbsp;</b>단측 신뢰 상한을 \( Z_{\alpha} = 2 \)로 구하면?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>46</p></li>
+    <li><span class="mark">②</span><p>52</p></li>
+    <li class="correct"><span class="mark">③</span><p>54</p></li>
+    <li><span class="mark">④</span><p>48</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>표준오차 \( SE = 16 / \sqrt{64} = 16 / 8 = 2 \). 97.5% 단측 신뢰 상한 \( = \bar{x} + Z_{\alpha} \cdot SE = 50 + 2 \times 2 = 54 \). 즉 모평균은 97.5% 신뢰 수준에서 54 이하라고 주장할 수 있다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 07</div>
+  <div class="q-title">07. Z 분포 양측 가설검정</div>
+  <div class="q-body"><p>전국 중학생의 하루 평균 TV 시청 시간이 2시간으로 알려져 있다. 한 지역의 중학생 \( n = 400 \)명을 조사한 결과 표본평균 \( \bar{x} = 2.5 \)시간, 모집단 표준편차 \( \sigma = 4 \)시간이다. 유의수준 \( \alpha = 0.05 \)의 양측검정( \( Z_{\alpha/2} = 2 \) )을 수행할 때, 95% 신뢰구간과 결론으로 <b>옳은 것</b>은?</p></div>
+  <ol class="choices">
+    <li class="correct"><span class="mark">①</span><p>95% 신뢰구간 (2.1, 2.9), 2.0을 포함하지 않으므로 귀무가설 기각. 해당 지역의 평균 TV 시청 시간이 전국 평균과 유의미하게 다르다.</p></li>
+    <li><span class="mark">②</span><p>95% 신뢰구간 (2.1, 2.9), 2.0을 포함하지 않으므로 귀무가설을 기각하지 못한다.</p></li>
+    <li><span class="mark">③</span><p>95% 신뢰구간 (2.3, 2.7), 2.0을 포함하므로 귀무가설 기각.</p></li>
+    <li><span class="mark">④</span><p>95% 신뢰구간 (1.6, 3.2), 2.0을 포함하므로 귀무가설 기각.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>\( SE = 4 / \sqrt{400} = 0.2 \). 95% 신뢰구간 \( = 2.5 \pm 2 \times 0.2 = 2.5 \pm 0.4 \), 즉 (2.1, 2.9). 귀무가설 값 \( \mu_0 = 2.0 \)은 구간에 포함되지 않으므로 귀무가설을 기각한다. 해당 지역의 평균 TV 시청 시간이 전국 평균과 통계적으로 유의미하게 다르다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 08</div>
+  <div class="q-title">08. Z 분포 단측 가설검정</div>
+  <div class="q-body"><p>기존 진통제의 평균 통증 감소 점수가 5점으로 알려져 있다. 신약을 \( n = 100 \)명에게 투여한 결과 표본평균 \( \bar{x} = 5.9 \)점, 모집단 표준편차 \( \sigma = 3 \)점이었다. "신약이 기존보다 효과가 더 크다"를 유의수준 \( \alpha = 0.025 \)의 단측검정 ( \( Z_{\alpha} = 2 \) )으로 검증할 때, 검정통계량과 결론으로 <b>옳은 것</b>은?</p></div>
+  <ol class="choices">
+    <li class="correct"><span class="mark">①</span><p>\( Z = 3 \)로 임계값 2보다 크므로 귀무가설 기각. 신약의 효과가 기존보다 유의미하게 크다.</p></li>
+    <li><span class="mark">②</span><p>\( Z = 2 \)로 임계값과 동일하여 판단할 수 없다.</p></li>
+    <li><span class="mark">③</span><p>\( Z = 1.5 \)로 임계값보다 작으므로 귀무가설을 기각하지 못한다.</p></li>
+    <li><span class="mark">④</span><p>\( Z = 3 \)로 임계값 2보다 크지만 소표본이므로 판단을 유보한다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>\( SE = 3 / \sqrt{100} = 0.3 \). 검정통계량 \( Z = (5.9 - 5.0) / 0.3 = 3 \). 이 값은 임계값 \( Z_{\alpha} = 2 \)보다 크므로 기각역 안에 들어간다. 따라서 귀무가설을 기각하고, 신약의 통증 감소 효과가 기존보다 통계적으로 유의미하게 크다고 결론 내린다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 09</div>
+  <div class="q-title">09. T 분포 양측 95% 신뢰구간</div>
+  <div class="q-body"><p>소규모 임상 시험에서 신약을 \( n = 25 \)명에게 투여하여 수축기 혈압 감소량을 측정하였다. 표본평균 \( \bar{x} = 10 \)mmHg, 표본 표준편차 \( s = 5 \)mmHg이다. 모집단 표준편차는 알려져 있지 않으며, 자유도 \( df = 24 \)의 \( t_{\alpha/2} \approx 2 \)로 근사한다. 모평균에 대한 <b>95% 양측 신뢰구간</b>은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>(9mmHg, 11mmHg)</p></li>
+    <li><span class="mark">②</span><p>(5mmHg, 15mmHg)</p></li>
+    <li class="correct"><span class="mark">③</span><p>(8mmHg, 12mmHg)</p></li>
+    <li><span class="mark">④</span><p>(6mmHg, 14mmHg)</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>표본이 소표본(\( n < 30 \))이고 모집단 표준편차를 모르므로 t 분포를 사용한다. \( SE = s / \sqrt{n} = 5 / \sqrt{25} = 1 \). 95% 신뢰구간 \( = \bar{x} \pm t_{\alpha/2, 24} \cdot SE = 10 \pm 2 \times 1 = (8, 12) \).</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 10</div>
+  <div class="q-title">10. T 분포 단측 신뢰 상한 (97.5%)</div>
+  <div class="q-body"><p>응급실 환자 \( n = 25 \)명의 진료 대기 시간을 측정하였다. 표본평균 \( \bar{x} = 30 \)분, 표본 표준편차 \( s = 5 \)분이며, 모집단 표준편차는 알려져 있지 않다. 병원 평가를 위해 모평균 대기 시간의 <b>97.5% 단측 신뢰 상한</b>을 자유도 \( df = 24 \)의 \( t_{\alpha, 24} \approx 2 \)로 구하면?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>28분</p></li>
+    <li><span class="mark">②</span><p>35분</p></li>
+    <li class="correct"><span class="mark">③</span><p>32분</p></li>
+    <li><span class="mark">④</span><p>31분</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>소표본(\( n < 30 \))이고 \( \sigma \)를 모르므로 t 분포를 사용한다. 표준오차 \( SE = s / \sqrt{n} = 5 / \sqrt{25} = 1 \). 97.5% 단측 신뢰 상한 \( = \bar{x} + t_{\alpha, 24} \cdot SE = 30 + 2 \times 1 = 32 \)분. 모평균 대기 시간이 32분 이하라고 97.5% 신뢰 수준에서 주장할 수 있다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 11</div>
+  <div class="q-title">11. T 분포 양측 가설검정</div>
+  <div class="q-body"><p>9번 문제와 동일한 상황이다(\( n = 25 \), \( \bar{x} = 10 \)mmHg, \( s = 5 \)mmHg). 기존 약물의 평균 혈압 감소량은 7mmHg로 알려져 있다. 신약의 효과가 기존과 다른지를 유의수준 \( \alpha = 0.05 \)의 양측검정( \( t_{\alpha/2, 24} \approx 2 \) )으로 판단할 때, 신뢰구간 기반의 결론은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>소표본이므로 t 분포로는 결론을 내릴 수 없다.</p></li>
+    <li><span class="mark">②</span><p>95% 신뢰구간 (8, 12)가 7을 포함하므로 귀무가설을 기각하지 못한다.</p></li>
+    <li class="correct"><span class="mark">③</span><p>95% 신뢰구간 (8, 12)가 7을 포함하지 않으므로 귀무가설 기각. 신약의 효과가 기존과 유의미하게 다르다.</p></li>
+    <li><span class="mark">④</span><p>95% 신뢰구간 (8, 12)가 0을 포함하지 않으므로 귀무가설 기각.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>9번 문제에서 구한 95% 신뢰구간 (8, 12)는 귀무가설 값 7을 포함하지 않는다. 따라서 귀무가설을 기각하며, 신약의 혈압 감소 효과가 기존 약물과 통계적으로 유의미하게 다르다고 결론 내린다. 신뢰구간이 0이 아니라 "귀무가설 값"을 포함하는지를 확인해야 한다는 점에 주의.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 12</div>
+  <div class="q-title">12. T 분포 단측 가설검정</div>
+  <div class="q-body"><p>새 식이요법을 시행한 \( n = 25 \)명의 12주 후 체중 감소량을 측정하였다. 표본평균 \( \bar{x} = 6 \)kg, 표본 표준편차 \( s = 5 \)kg이다. 기존 식이요법의 평균 체중 감소량이 3kg로 알려져 있을 때, "새 식이요법이 더 효과적이다"를 유의수준 \( \alpha = 0.025 \)의 단측검정( \( t_{\alpha, 24} \approx 2 \) )으로 검증하라. 검정통계량과 결론은?</p></div>
+  <ol class="choices">
+    <li class="correct"><span class="mark">①</span><p>\( t = 3 \), 임계값 2를 초과하므로 귀무가설 기각. 새 식이요법의 효과가 유의미하게 크다.</p></li>
+    <li><span class="mark">②</span><p>\( t < 2 \)이므로 귀무가설을 기각하지 못한다.</p></li>
+    <li><span class="mark">③</span><p>\( t = 3 \)이지만 소표본이므로 귀무가설을 기각할 수 없다.</p></li>
+    <li><span class="mark">④</span><p>\( t = 2 \)로 임계값과 동일하므로 판단을 유보한다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>\( SE = s / \sqrt{n} = 5 / \sqrt{25} = 1 \). 검정통계량 \( t = (\bar{x} - \mu_0) / SE = (6 - 3) / 1 = 3 \). 임계값 \( t_{\alpha, 24} = 2 \)보다 크므로 기각역 안에 속한다. 따라서 귀무가설을 기각하고, 새 식이요법의 체중 감소 효과가 기존보다 통계적으로 유의미하게 크다고 결론 내린다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 13</div>
+  <div class="q-title">13. 유의수준 개념</div>
+  <div class="q-body"><p>유의수준 \( \alpha = 0.05 \)의 의미로 <b>가장 적절한 것</b>은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>귀무가설이 참일 확률이 5%라는 뜻이다.</p></li>
+    <li><span class="mark">②</span><p>검정 결과가 재현 가능할 확률이 95%라는 뜻이다.</p></li>
+    <li class="correct"><span class="mark">③</span><p>귀무가설이 실제로 참일 때, 이를 잘못 기각할 확률의 최대 허용치이다.</p></li>
+    <li><span class="mark">④</span><p>대립가설이 실제로 참일 때, 이를 기각할 확률이다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>유의수준 \( \alpha \)는 "귀무가설이 실제로 참인데도 잘못 기각할 확률"의 최대 허용치이며, 이는 곧 1종 오류의 최대 허용 확률이다. 귀무가설이 참일 확률이나 대립가설이 참일 확률과는 무관하다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 14</div>
+  <div class="q-title">14. 유의확률(p값) 개념</div>
+  <div class="q-body"><p>유의확률(p값)에 대한 설명으로 <b>가장 적절한 것</b>은?</p></div>
+  <ol class="choices">
+    <li class="correct"><span class="mark">①</span><p>귀무가설이 참이라고 가정했을 때, 관찰된 결과와 같거나 더 극단적인 결과가 나올 확률이다.</p></li>
+    <li><span class="mark">②</span><p>귀무가설이 참일 확률이다.</p></li>
+    <li><span class="mark">③</span><p>대립가설이 참일 확률이다.</p></li>
+    <li><span class="mark">④</span><p>연구 결과가 옳을 확률이다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>p값은 "귀무가설이 참이라고 가정했을 때, 실제로 관찰된 것과 같거나 더 극단적인 결과가 나올 확률"이다. 이 값이 유의수준보다 작으면 귀무가설 하에서는 매우 드문 일이 벌어진 셈이므로 귀무가설을 기각한다. p값 자체가 귀무가설이 참일 확률이라는 해석은 흔한 오해이며 틀린 해석이다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 15</div>
+  <div class="q-title">15. 기각역</div>
+  <div class="q-body"><p>양측 Z 검정에서 유의수준 \( \alpha = 0.05 \), 임계값 \( Z_{\alpha/2} = 2 \)를 사용할 때, <b>기각역</b>을 올바르게 표현한 것은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>\( Z > 0 \)</p></li>
+    <li><span class="mark">②</span><p>\( Z > 2 \)만 해당</p></li>
+    <li class="correct"><span class="mark">③</span><p>\( |Z| > 2 \) (즉, \( Z > 2 \) 또는 \( Z < -2 \))</p></li>
+    <li><span class="mark">④</span><p>\( -2 < Z < 2 \)</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>양측검정의 기각역은 분포의 양 끝 두 영역을 모두 포함한다. 따라서 검정통계량의 절댓값이 임계값보다 큰 영역이 기각역이 되며, \( |Z| > 2 \), 즉 \( Z > 2 \) 또는 \( Z < -2 \)이다. \( -2 \le Z \le 2 \) 영역은 귀무가설 채택역(기각하지 못하는 영역)이다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 16</div>
+  <div class="q-title">16. 1종 오류와 2종 오류</div>
+  <div class="q-body"><p>가설검정에서 발생할 수 있는 <b>1종 오류(\( \alpha \))와 2종 오류(\( \beta \))</b>에 관한 설명으로 <b>가장 옳은 것</b>은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>2종 오류를 줄이는 가장 효과적인 방법은 유의수준을 더 낮게 설정하는 것이다.</p></li>
+    <li><span class="mark">②</span><p>1종 오류는 귀무가설이 거짓일 때 기각하지 못하는 실수, 2종 오류는 귀무가설이 참일 때 기각하는 실수이다.</p></li>
+    <li><span class="mark">③</span><p>유의수준 \( \alpha \)를 작게 설정하면 1종 오류와 2종 오류가 모두 감소한다.</p></li>
+    <li class="correct"><span class="mark">④</span><p>1종 오류는 귀무가설이 참일 때 기각하는 실수, 2종 오류는 귀무가설이 거짓일 때 기각하지 못하는 실수이다. 유의수준을 낮추면 1종 오류는 감소하지만 2종 오류는 증가하며, 2종 오류를 줄이는 가장 효과적인 방법은 표본 크기를 늘리는 것이다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>1종 오류는 귀무가설이 실제로 참일 때 이를 기각하는 실수(예: 효과 없는 신약을 효과 있다고 판정), 2종 오류는 귀무가설이 실제로 거짓일 때 기각하지 못하는 실수(예: 효과 있는 신약을 놓침)이다. 유의수준 \( \alpha \)를 낮추면 1종 오류는 감소하지만 2종 오류(\( \beta \))는 증가하는 트레이드오프 관계이며, 2종 오류를 줄이는 가장 효과적이고 표준적인 방법은 표본 크기를 늘려 검정력(\( 1 - \beta \))을 높이는 것이다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 17</div>
+  <div class="q-title">17. 이진변수 양측 95% 신뢰구간</div>
+  <div class="q-body"><p><span style="font-family: NanumGothic, 나눔고딕, NanumGothic, 돋움, dotum, Helvetica, sans-serif, AppleGothic;">항암 신약의 반응률을 조사하기 위해 n = 100명의 환자에게 투여한 결과 75명이 치료 반응을 보였다. 표본비율은 &nbsp;\( \hat{p} = 0.75 \)이고, 표준오차는\( SE = \sqrt{\hat{p}(1-\hat{p})/n} \approx 0.04 \) 이다. 95% 신뢰수준에서 \( Z_{\alpha/2} = 2 \)를 사용할 때, 모비율 p에 대한 95% 양측 신뢰구간을 구하시오.</span></p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>(0.71, 0.79)</p></li>
+    <li><span class="mark">②</span><p>(0.75, 0.83)</p></li>
+    <li class="correct"><span class="mark">③</span><p>(0.67, 0.83)</p></li>
+    <li><span class="mark">④</span><p>(0.67, 0.75)</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>95% 신뢰구간 \( = \hat{p} \pm Z_{\alpha/2} \cdot SE = 0.75 \pm 2 \times 0.04 = 0.75 \pm 0.08 \), 즉 (0.67, 0.83). 신뢰구간 적용 조건(성공과 실패 횟수가 각각 5 이상)이 모두 충족된다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 18</div>
+  <div class="q-title">18. 이진변수 단측 신뢰구간 (97.5% 하한)</div>
+  <div class="q-body"><p>새 백신의 항체 형성률을 조사하기 위해 접종자 \( n = 400 \)명을 관찰한 결과 360명이 항체를 형성하였다. 표본 비율 \( \hat{p} = 0.90 \), 표준오차 \( SE = \sqrt{\hat{p}(1-\hat{p})/n} = 0.015 \)&nbsp;이다. 규제기관은 모비율이 특정 기준 이상임을 <b>97.5% 단측 신뢰 하한</b>으로 확인할 것을 요구한다. \( Z_{\alpha} = 2 \)를 사용할 때 단측 신뢰 하한은?</p></div>
+  <ol class="choices">
+    <li class="correct"><span class="mark">①</span><p>0.87</p></li>
+    <li><span class="mark">②</span><p>0.93</p></li>
+    <li><span class="mark">③</span><p>0.88</p></li>
+    <li><span class="mark">④</span><p>0.85</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>97.5% 단측 신뢰 하한 \( = \hat{p} - Z_{\alpha} \cdot SE = 0.90 - 2 \times 0.015 = 0.87 \). 즉 모비율은 97.5% 신뢰 수준에서 0.87 이상이라고 주장할 수 있다. 규제기관 기준이 0.87 미만이라면 이 백신은 기준을 충족한다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 19</div>
+  <div class="q-title">19. 이진변수 양측 가설검정</div>
+  <div class="q-body"><p>기존 치료법의 반응률이 \( p_0 = 0.65 \)(65%)로 알려져 있다. 신약을 \( n = 100 \)명에게 투여한 결과 75명이 반응하여 \( \hat{p} = 0.75 \), \( SE = \sqrt{{p_0}(1-{p_0})/n} \approx 0.04 \)&nbsp;이다. 유의수준 \( \alpha = 0.05 \)의 양측검정( \( Z_{\alpha/2} = 2 \) )을 수행할 때, 17번에서 구한 95% 신뢰구간 (0.67, 0.83)을 기반으로 한 결론은?</p></div>
+  <ol class="choices">
+    <li class="correct"><span class="mark">①</span><p>95% 신뢰구간이 0.65를 포함하지 않으므로 귀무가설 기각. 신약 반응률이 기존과 유의미하게 다르다.</p></li>
+    <li><span class="mark">②</span><p>95% 신뢰구간이 0을 포함하지 않으므로 귀무가설 기각.</p></li>
+    <li><span class="mark">③</span><p>표본이 작아 판단을 유보한다.</p></li>
+    <li><span class="mark">④</span><p>95% 신뢰구간이 0.65를 포함하므로 귀무가설을 기각하지 못한다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>95% 신뢰구간 (0.67, 0.83)은 귀무가설 값 \( p_0 = 0.65 \)를 포함하지 않는다. 따라서 귀무가설을 기각하며, 신약의 반응률이 기존 치료법과 통계적으로 유의미하게 다르다(이 경우 더 높다)고 결론 내린다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 20</div>
+  <div class="q-title">20. 이진변수 단측 가설검정</div>
+  <div class="q-body"><p>백신 미접종자의 감염률이 \( p_0 = 0.10 \)(10%)으로 알려져 있다. 접종자 \( n = 400 \)명 중 24명이 감염되어 \( \hat{p} = 0.06 \)으로 관찰되었다. 귀무가설 하에서의 표준오차 \( SE = \sqrt{p_0(1-p_0)/n} = 0.015 \)로 주어진다. "접종자의 감염률이 미접종자보다 <b>낮다</b>"를 유의수준 \( \alpha = 0.025 \)의 단측검정( \( Z_{\alpha} = 2 \) )으로 검증할 때, 검정통계량과 결론은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>\( Z \approx -2.67 \)이지만 음수이므로 귀무가설을 기각할 수 없다.</p></li>
+    <li><span class="mark">②</span><p>\( Z \approx 0.67 \)로 임계값보다 작으므로 귀무가설을 기각하지 못한다.</p></li>
+    <li><span class="mark">③</span><p>표본 크기가 작아 결론을 유보해야 한다.</p></li>
+    <li class="correct"><span class="mark">④</span><p>\( Z \approx -2.67 \)로 \( Z &lt; -2 \)이므로 귀무가설 기각. 접종자 감염률이 미접종자보다 유의미하게 낮다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>검정통계량 \( Z = (\hat{p} - p_0) / SE = (0.06 - 0.10) / 0.015 \approx -2.67 \). 단측(하단) 기각역은 \( Z < -Z_{\alpha} = -2 \)이다. 관찰된 \( Z \approx -2.67 < -2 \)이므로 기각역 안에 들어간다. 따라서 귀무가설을 기각하고, 접종자의 감염률이 미접종자보다 통계적으로 유의미하게 낮다고 결론 내린다.</p>
+  </div>
+</div>
+<div class="answer-key">
+  <h3>ANSWER KEY</h3>
+  <div class="grid">
+    <span>01.<b>④</b></span>
+    <span>02.<b>④</b></span>
+    <span>03.<b>①</b></span>
+    <span>04.<b>③</b></span>
+    <span>05.<b>③</b></span>
+    <span>06.<b>③</b></span>
+    <span>07.<b>①</b></span>
+    <span>08.<b>①</b></span>
+    <span>09.<b>③</b></span>
+    <span>10.<b>③</b></span>
+    <span>11.<b>③</b></span>
+    <span>12.<b>①</b></span>
+    <span>13.<b>③</b></span>
+    <span>14.<b>①</b></span>
+    <span>15.<b>③</b></span>
+    <span>16.<b>④</b></span>
+    <span>17.<b>③</b></span>
+    <span>18.<b>①</b></span>
+    <span>19.<b>①</b></span>
+    <span>20.<b>④</b></span>
+  </div>
+</div>
+</section>
+<section id="sec2">
+<div class="section-head">
+  <div class="tag">PART II</div>
+  <h2>2차 중간평가</h2>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 01</div>
+  <div class="q-title">01. 모집단과 모수 개념</div>
+  <div class="q-body"><p>부산시 직장인 중 500명을 무작위로 추출하여 하루 평균 출퇴근 소요 시간을 조사하였다. 조사 결과 표본 평균은 72분이었고, 전국 직장인의 평균 출퇴근 시간 \( \mu \)는 알려져 있지 않다. 다음 설명 중 <span>맞은 것을 모두 선택한 것은?&nbsp;<br></span><span><br>가. 모집단(population)</span>: 관심 대상인 개체들의 집합 — 전국 직장인 약 2,000만 명<br>나. 속성/확률변수: 그 개체에게서 관찰하려는 특성 — 출퇴근 시간, 통근 거리, 만족도 등 여러 개 가능<br>다. 표본(sample): 모집단에서 뽑은 일부 개체들 — 500명<br>라. 모수(parameter): 모집단에서 특정 속성의 요약값 — 출퇴근 시간의 평균 μ<br>마. 표본통계량: 표본에서 같은 속성의 요약값 — 표본평균 72분</p><br></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p><span>가,나,다</span></p></li>
+    <li><span class="mark">②</span><p>가,나</p></li>
+    <li><span class="mark">③</span><p><span>가,나,다,라</span></p></li>
+    <li class="correct"><span class="mark">④</span><p><span><span>모두</span></span></p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>모집단은 관심의 대상이 되는 집단 전체, 표본은 실제 조사된 일부(500명)이다. 모집단에서 계산되는 \( \mu \)는 모수이고, 표본에서 관찰된 72분은 표본통계량이다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 02</div>
+  <div class="q-title">02. 확률변수 유형(속성)</div>
+  <div class="q-body"><p>제조업 품질관리 연구에서 관찰되는 다음 속성 중 <b>연속형 확률변수</b>에 해당하는 것은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>한 시간 동안 발생한 불량품 개수</p></li>
+    <li class="correct"><span class="mark">②</span><p>제품 한 개의 무게(g)</p></li>
+    <li><span class="mark">③</span><p>검사 결과 합격 여부(합격 / 불합격)</p></li>
+    <li><span class="mark">④</span><p>품질 등급(A / B / C / D)</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>연속형은 소수점까지 의미 있는 실수값(무게, 길이, 시간 등)을 갖는다. 합격 여부는 이진(명목) 범주형, 품질 등급은 서열형, 불량품 개수는 셀 수 있는 이산형이다. 변수 유형을 올바르게 파악하는 것이 적절한 통계 방법 선택의 첫걸음이다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 03</div>
+  <div class="q-title">03. 중심극한정리</div>
+  <div class="q-body"><p>중심극한정리(CLT)에 관한 다음 설명 중 <b>옳은 것</b>은?</p></div>
+  <ol class="choices">
+    <li class="correct"><span class="mark">①</span><p>모집단의 분포 형태와 무관하게, 표본 크기가 충분히 크면 표본 평균의 분포는 정규분포에 근사한다.</p></li>
+    <li><span class="mark">②</span><p>표본 크기가 작을수록 표본 평균의 분포가 정규분포에 더 가까워진다.</p></li>
+    <li><span class="mark">③</span><p>표본 크기가 충분히 크면 모집단 자체의 분포가 정규분포에 근사한다.</p></li>
+    <li><span class="mark">④</span><p>모집단이 정규분포를 따를 때에만 CLT를 적용할 수 있다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>CLT의 핵심은 원래 모집단의 분포 형태가 무엇이든 상관없이, 표본 크기가 충분히 크면 표본 평균의 분포가 정규분포에 근사한다는 점이다. 모집단이 정규분포일 필요는 없으며, 표본 평균(통계량)의 분포에 관한 정리이지 모집단 자체의 분포에 관한 정리가 아니다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 04</div>
+  <div class="q-title">04. 신뢰구간 해석</div>
+  <div class="q-body"><p>어느 연구에서 모평균 \( \mu \)에 대한 95% 신뢰구간이 (48점, 52점)으로 계산되었다. 이 구간의 해석으로 <b>가장 적절한 것</b>은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>모평균이 48점과 52점 사이에 있을 확률이 95%이다.</p></li>
+    <li><span class="mark">②</span><p>모집단 개체의 95%가 48점과 52점 사이에 있다.</p></li>
+    <li class="correct"><span class="mark">③</span><p>같은 방법으로 표본을 반복 추출해 신뢰구간을 계산하면, 그중 약 95%의 구간이 실제 모평균을 포함한다.</p></li>
+    <li><span class="mark">④</span><p>표본 평균이 48점과 52점 사이에 있을 확률이 95%이다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>모집단 평균은 고정된 값이므로 "확률이 95%이다"라는 해석은 틀리다. 올바른 해석은 "같은 방법으로 표본을 반복 추출해 신뢰구간을 구할 때, 약 95%의 구간이 실제 모평균을 포함한다"이다. 변하는 것은 표본이고, 표본마다 달라지는 신뢰구간들 중 95%가 참값을 포함한다는 뜻이다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 05</div>
+  <div class="q-title">05. Z 분포 양측 95% 신뢰구간 계산</div>
+  <div class="q-body"><p>한 콜센터에서 고객 응대 1건당 소요되는 처리 시간을 조사하였다. 표본 크기 \( n = 100 \), 표본평균 \( \bar{x} = 10 \)분, 모집단 표준편차 \( \sigma = 5 \)분으로 알려져 있다. \( Z_{\alpha/2} = 2 \)를 사용할 때, 모평균에 대한 <b>95% 양측 신뢰구간</b>은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>(5분, 15분)</p></li>
+    <li><span class="mark">②</span><p>(8분, 12분)</p></li>
+    <li><span class="mark">③</span><p>(9.5분, 10.5분)</p></li>
+    <li class="correct"><span class="mark">④</span><p>(9분, 11분)</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>표준오차 \( SE = \sigma / \sqrt{n} = 5 / \sqrt{100} = 0.5 \). 95% 신뢰구간 \( = \bar{x} \pm Z_{\alpha/2} \cdot SE = 10 \pm 2 \times 0.5 = 10 \pm 1 \), 즉 (9분, 11분).</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 06</div>
+  <div class="q-title">06. Z 분포 단측 신뢰구간 (97.5% 하한)</div>
+  <div class="q-body"><p>표본 크기 \( n = 64 \), 표본평균 \( \bar{x} = 50 \), 모집단 표준편차 \( \sigma = 16 \)이다. 유의수준 \( \alpha = 0.025 \)의 <b>97.5%&nbsp;</b>단측 신뢰 <b>하한</b>을 \( Z_{\alpha} = 2 \)로 구하면?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>54</p></li>
+    <li><span class="mark">②</span><p>52</p></li>
+    <li class="correct"><span class="mark">③</span><p>46</p></li>
+    <li><span class="mark">④</span><p>48</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>표준오차 \( SE = 16 / \sqrt{64} = 16 / 8 = 2 \). 97.5% 단측 신뢰 하한 \( = \bar{x} - Z_{\alpha} \cdot SE = 50 - 2 \times 2 = 46 \). 즉 모평균은 97.5% 신뢰 수준에서 46 이상이라고 주장할 수 있다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 07</div>
+  <div class="q-title">07. Z 분포 양측 가설검정</div>
+  <div class="q-body"><p>전국 성인의 하루 평균 스마트폰 사용 시간이 2시간으로 알려져 있다. 한 회사의 임직원 \( n = 400 \)명을 조사한 결과 표본평균 \( \bar{x} = 2.5 \)시간, 모집단 표준편차 \( \sigma = 4 \)시간이다. 유의수준 \( \alpha = 0.05 \)의 양측검정( \( Z_{\alpha/2} = 2 \) )을 수행할 때, 95% 신뢰구간과 결론으로 <b>옳은 것</b>은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>95% 신뢰구간 (1.6, 3.2), 2.0을 포함하므로 귀무가설 기각.</p></li>
+    <li><span class="mark">②</span><p>95% 신뢰구간 (2.1, 2.9), 2.0을 포함하지 않으므로 귀무가설을 기각하지 못한다.</p></li>
+    <li><span class="mark">③</span><p>95% 신뢰구간 (2.3, 2.7), 2.0을 포함하므로 귀무가설 기각.</p></li>
+    <li class="correct"><span class="mark">④</span><p>95% 신뢰구간 (2.1, 2.9), 2.0을 포함하지 않으므로 귀무가설 기각. 해당 회사 임직원의 평균 스마트폰 사용 시간이 전국 평균과 유의미하게 다르다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>\( SE = 4 / \sqrt{400} = 0.2 \). 95% 신뢰구간 \( = 2.5 \pm 2 \times 0.2 = 2.5 \pm 0.4 \), 즉 (2.1, 2.9). 귀무가설 값 \( \mu_0 = 2.0 \)은 구간에 포함되지 않으므로 귀무가설을 기각한다. 해당 회사 임직원의 평균 스마트폰 사용 시간이 전국 평균과 통계적으로 유의미하게 다르다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 08</div>
+  <div class="q-title">08. Z 분포 단측 가설검정</div>
+  <div class="q-body"><p>기존 생산공정의 평균 제품 결함률 점수가 5.9점(점수가 낮을수록 결함이 적음)으로 알려져 있다. 새로 도입한 공정으로 생산된 제품 \( n = 100 \)개를 조사한 결과 표본평균 \( \bar{x} = 5.0 \)점, 모집단 표준편차 \( \sigma = 3 \)점이었다. "신공정의 평균 결함 점수가 기존보다 <b>더 작다</b>"를 유의수준 \( \alpha = 0.025 \)의 단측검정 ( \( Z_{\alpha} = 2 \) )으로 검증할 때, 검정통계량과 결론으로 <b>옳은 것</b>은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>\( Z = -3 \)이지만 음수이므로 귀무가설을 기각할 수 없다.</p></li>
+    <li class="correct"><span class="mark">②</span><p>\( Z = -3 \)으로 \( Z < -2 \)이므로 귀무가설 기각. 신공정의 결함 점수가 기존보다 유의미하게 작다.</p></li>
+    <li><span class="mark">③</span><p>\( Z = -1.5 \)로 임계값보다 작으므로 귀무가설을 기각하지 못한다.</p></li>
+    <li><span class="mark">④</span><p>\( Z = 3 \)으로 양수이므로 귀무가설을 기각할 수 없다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>\( SE = 3 / \sqrt{100} = 0.3 \). 검정통계량 \( Z = (\bar{x} - \mu_0) / SE = (5.0 - 5.9) / 0.3 = -3 \). 단측(하단) 기각역은 \( Z < -Z_{\alpha} = -2 \)이다. 관찰된 \( Z = -3 < -2 \)이므로 기각역 안에 들어간다. 따라서 귀무가설을 기각하고, 신공정의 결함 점수가 기존보다 통계적으로 유의미하게 작다고 결론 내린다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 09</div>
+  <div class="q-title">09. T 분포 양측 95% 신뢰구간</div>
+  <div class="q-body"><p>중소기업 \( n = 25 \)곳의 신제품 출시 후 월 매출 증가율(%)을 조사하였다. 표본평균 \( \bar{x} = 10 \)%, 표본 표준편차 \( s = 5 \)%이다. 모집단 표준편차는 알려져 있지 않으며, 자유도 \( df = 24 \)의 \( t_{\alpha/2} \approx 2 \)로 근사한다. 모평균에 대한 <b>95% 양측 신뢰구간</b>은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>(6%, 14%)</p></li>
+    <li><span class="mark">②</span><p>(5%, 15%)</p></li>
+    <li><span class="mark">③</span><p>(9%, 11%)</p></li>
+    <li class="correct"><span class="mark">④</span><p>(8%, 12%)</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>표본이 소표본(\( n < 30 \))이고 모집단 표준편차를 모르므로 t 분포를 사용한다. \( SE = s / \sqrt{n} = 5 / \sqrt{25} = 1 \). 95% 신뢰구간 \( = \bar{x} \pm t_{\alpha/2, 24} \cdot SE = 10 \pm 2 \times 1 = (8, 12) \).</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 10</div>
+  <div class="q-title">10. T 분포 단측 신뢰 하한 (97.5%)</div>
+  <div class="q-body"><p>한 카페 체인의 \( n = 25 \)개 매장에서 일일 영업이익(만원)을 측정하였다. 표본평균 \( \bar{x} = 30 \)만원, 표본 표준편차 \( s = 5 \)만원이며, 모집단 표준편차는 알려져 있지 않다. 본사 평가를 위해 모평균 영업이익의 <b>97.5% 단측 신뢰 하한</b>을 자유도 \( df = 24 \)의 \( t_{\alpha, 24} \approx 2 \)로 구하면?</p></div>
+  <ol class="choices">
+    <li class="correct"><span class="mark">①</span><p>28만원</p></li>
+    <li><span class="mark">②</span><p>29만원</p></li>
+    <li><span class="mark">③</span><p>32만원</p></li>
+    <li><span class="mark">④</span><p>25만원</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>소표본(\( n < 30 \))이고 \( \sigma \)를 모르므로 t 분포를 사용한다. 표준오차 \( SE = s / \sqrt{n} = 5 / \sqrt{25} = 1 \). 97.5% 단측 신뢰 하한 \( = \bar{x} - t_{\alpha, 24} \cdot SE = 30 - 2 \times 1 = 28 \)만원. 모평균 영업이익이 28만원 이상이라고 97.5% 신뢰 수준에서 주장할 수 있다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 11</div>
+  <div class="q-title">11. T 분포 양측 가설검정</div>
+  <div class="q-body"><p>9번 문제와 동일한 상황이다(\( n = 25 \), \( \bar{x} = 10 \)%, \( s = 5 \)%). 동종 업계의 평균 매출 증가율은 7%로 알려져 있다. 신제품 효과가 업계 평균과 다른지를 유의수준 \( \alpha = 0.05 \)의 양측검정( \( t_{\alpha/2, 24} \approx 2 \) )으로 판단할 때, 신뢰구간 기반의 결론은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>95% 신뢰구간 (8, 12)가 0을 포함하지 않으므로 귀무가설 기각.</p></li>
+    <li class="correct"><span class="mark">②</span><p>95% 신뢰구간 (8, 12)가 7을 포함하지 않으므로 귀무가설 기각. 신제품의 매출 증가율이 업계 평균과 유의미하게 다르다.</p></li>
+    <li><span class="mark">③</span><p>소표본이므로 t 분포로는 결론을 내릴 수 없다.</p></li>
+    <li><span class="mark">④</span><p>95% 신뢰구간 (8, 12)가 7을 포함하므로 귀무가설을 기각하지 못한다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>9번 문제에서 구한 95% 신뢰구간 (8, 12)는 귀무가설 값 7을 포함하지 않는다. 따라서 귀무가설을 기각하며, 신제품의 매출 증가율이 업계 평균과 통계적으로 유의미하게 다르다고 결론 내린다. 신뢰구간이 0이 아니라 "귀무가설 값"을 포함하는지를 확인해야 한다는 점에 주의.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 12</div>
+  <div class="q-title">12. T 분포 단측 가설검정</div>
+  <div class="q-body"><p>새 자동화 솔루션을 도입한 \( n = 25 \)개 부서의 월 평균 인건비 절감액을 측정한 결과(부서당 월 절감액, 단위: 백만원), 표본평균 \( \bar{x} = 6 \)백만원, 표본 표준편차 \( s = 5 \)백만원이었다. 기존 솔루션의 평균 절감액이 9백만원으로 알려져 있을 때, "새 솔루션의 평균 절감액이 기존보다 <b>더 작다</b>"를 유의수준 \( \alpha = 0.025 \)의 단측검정( \( t_{\alpha, 24} \approx 2 \) )으로 검증하라. 검정통계량과 결론은?</p></div>
+  <ol class="choices">
+    <li class="correct"><span class="mark">①</span><p>\( t = -3 \)으로 \( t < -2 \)이므로 귀무가설 기각. 새 솔루션의 절감액이 기존보다 유의미하게 작다.</p></li>
+    <li><span class="mark">②</span><p>\( t = -2 \)로 임계값과 동일하므로 판단을 유보한다.</p></li>
+    <li><span class="mark">③</span><p>\( t = -3 \)이지만 소표본이므로 귀무가설을 기각할 수 없다.</p></li>
+    <li><span class="mark">④</span><p>\( t > -2 \)이므로 귀무가설을 기각하지 못한다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>\( SE = s / \sqrt{n} = 5 / \sqrt{25} = 1 \). 검정통계량 \( t = (\bar{x} - \mu_0) / SE = (6 - 9) / 1 = -3 \). 단측(하단) 기각역은 \( t < -t_{\alpha, 24} = -2 \)이다. 관찰된 \( t = -3 < -2 \)이므로 기각역 안에 속한다. 따라서 귀무가설을 기각하고, 새 솔루션의 평균 절감액이 기존보다 통계적으로 유의미하게 작다고 결론 내린다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 13</div>
+  <div class="q-title">13. 유의수준 개념</div>
+  <div class="q-body"><p>가설검정에서 유의수준 \( \alpha \)에 대한 설명으로 <b>가장 적절한 것</b>은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>귀무가설이 거짓일 때 이를 올바르게 기각할 확률이다.</p></li>
+    <li><span class="mark">②</span><p>표본 결과로부터 귀무가설이 참일 확률을 직접 추정한 값이다.</p></li>
+    <li class="correct"><span class="mark">③</span><p>1종 오류를 저지를 확률의 최대 허용치, 즉 귀무가설이 참인데도 이를 기각할 확률의 상한이다.</p></li>
+    <li><span class="mark">④</span><p>같은 실험을 반복했을 때 동일한 결과가 나올 확률이다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>유의수준 \( \alpha \)는 "귀무가설이 실제로 참인데도 잘못 기각할 확률"의 최대 허용치이며, 이는 곧 1종 오류의 최대 허용 확률이다. 귀무가설이 참일 확률이나 대립가설이 참일 확률과는 무관하다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 14</div>
+  <div class="q-title">14. 유의확률(p값) 개념</div>
+  <div class="q-body"><p>가설검정에서 산출된 p값(유의확률)에 대한 다음 설명 중 <b>옳은 것</b>은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>유의수준이 정해지면 함께 결정되는 고정된 값이다.</p></li>
+    <li><span class="mark">②</span><p>대립가설이 옳을 확률이다.</p></li>
+    <li><span class="mark">③</span><p>관찰된 데이터를 보고 난 뒤 귀무가설이 참일 사후 확률이다.</p></li>
+    <li class="correct"><span class="mark">④</span><p>귀무가설이 참이라고 가정했을 때, 관찰된 결과와 같거나 더 극단적인 결과가 나올 확률이다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>p값은 "귀무가설이 참이라고 가정했을 때, 실제로 관찰된 것과 같거나 더 극단적인 결과가 나올 확률"이다. 이 값이 유의수준보다 작으면 귀무가설 하에서는 매우 드문 일이 벌어진 셈이므로 귀무가설을 기각한다. p값 자체가 귀무가설이 참일 확률이라는 해석은 흔한 오해이며 틀린 해석이다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 15</div>
+  <div class="q-title">15. 기각역</div>
+  <div class="q-body"><p>모평균에 대한 양측 Z 검정에서 유의수준 \( \alpha = 0.05 \), 임계값 \( Z_{\alpha/2} = 2 \)를 사용한다고 하자. 검정통계량 Z의 <b>기각역</b>을 올바르게 표현한 것은?</p></div>
+  <ol class="choices">
+    <li class="correct"><span class="mark">①</span><p>\( |Z| > 2 \) (즉, \( Z > 2 \) 또는 \( Z < -2 \))</p></li>
+    <li><span class="mark">②</span><p>\( Z > 0 \)</p></li>
+    <li><span class="mark">③</span><p>\( Z > 2 \)만 해당</p></li>
+    <li><span class="mark">④</span><p>\( -2 < Z < 2 \)</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>양측검정의 기각역은 분포의 양 끝 두 영역을 모두 포함한다. 따라서 검정통계량의 절댓값이 임계값보다 큰 영역이 기각역이 되며, \( |Z| > 2 \), 즉 \( Z > 2 \) 또는 \( Z < -2 \)이다. \( -2 \le Z \le 2 \) 영역은 귀무가설 채택역(기각하지 못하는 영역)이다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 16</div>
+  <div class="q-title">16. 1종 오류와 2종 오류</div>
+  <div class="q-body"><p>가설검정에서 발생할 수 있는 <b>1종 오류(\( \alpha \))와 2종 오류(\( \beta \))</b>, 그리고 이들 사이의 관계에 관한 설명으로 <b>가장 옳은 것</b>은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>유의수준 \( \alpha \)를 더 작게 설정하면 1종 오류와 2종 오류가 모두 자동으로 감소한다.</p></li>
+    <li><span class="mark">②</span><p>검정력 \( 1 - \beta \)는 1종 오류를 저지를 확률이며, \( \alpha \)를 키우면 검정력은 감소한다.</p></li>
+    <li class="correct"><span class="mark">③</span><p>표본 크기가 일정할 때 \( \alpha \)를 낮추면 \( \beta \)는 커지는 트레이드오프 관계에 있으며, 두 오류를 동시에 줄이려면 표본 크기를 늘려야 한다.</p></li>
+    <li><span class="mark">④</span><p>1종 오류는 귀무가설이 거짓인데 채택하는 실수이고, 2종 오류는 귀무가설이 참인데 기각하는 실수이다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>1종 오류는 귀무가설이 실제로 참일 때 이를 기각하는 실수, 2종 오류는 귀무가설이 실제로 거짓일 때 기각하지 못하는 실수이다. 표본 크기를 고정한 채 유의수준 \( \alpha \)를 낮추면 1종 오류는 감소하지만 2종 오류(\( \beta \))는 증가하는 트레이드오프 관계이며, 두 오류를 동시에 줄이는 가장 효과적이고 표준적인 방법은 표본 크기를 늘려 검정력(\( 1 - \beta \))을 높이는 것이다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 17</div>
+  <div class="q-title">17. 이진변수 양측 95% 신뢰구간</div>
+  <div class="q-body"><p><span style="font-family: NanumGothic, 나눔고딕, NanumGothic, 돋움, dotum, Helvetica, sans-serif, AppleGothic;">신규 모바일 앱의 사용자 만족도를 조사하기 위해 \( n = 100 \)명의 사용자에게 설문한 결과 75명이 "만족"을 선택하였다. 표본비율은 &nbsp;\( \hat{p} = 0.75 \)이고, 표준오차는 \( SE = \sqrt{\hat{p}(1-\hat{p})/n} \approx 0.04 \) 이다. 95% 신뢰수준에서 \( Z_{\alpha/2} = 2 \)를 사용할 때, 모비율 p에 대한 95% 양측 신뢰구간을 구하시오.</span></p></div>
+  <ol class="choices">
+    <li class="correct"><span class="mark">①</span><p>(0.67, 0.83)</p></li>
+    <li><span class="mark">②</span><p>(0.67, 0.75)</p></li>
+    <li><span class="mark">③</span><p>(0.75, 0.83)</p></li>
+    <li><span class="mark">④</span><p>(0.71, 0.79)</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>95% 신뢰구간 \( = \hat{p} \pm Z_{\alpha/2} \cdot SE = 0.75 \pm 2 \times 0.04 = 0.75 \pm 0.08 \), 즉 (0.67, 0.83). 신뢰구간 적용 조건(성공과 실패 횟수가 각각 5 이상)이 모두 충족된다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 18</div>
+  <div class="q-title">18. 이진변수 단측 신뢰구간 (97.5% 상한)</div>
+  <div class="q-body"><p>새로 도입한 생산라인의 불량률을 조사하기 위해 \( n = 400 \)개의 제품을 검사한 결과 40개가 불량이었다. 표본 비율 \( \hat{p} = 0.10 \), 표준오차 \( SE = \sqrt{\hat{p}(1-\hat{p})/n} = 0.015 \)이다. 품질관리팀은 모비율(불량률)이 특정 기준 이하임을 <b>97.5% 단측 신뢰 상한</b>으로 확인하려 한다. \( Z_{\alpha} = 2 \)를 사용할 때 단측 신뢰 상한은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>0.12</p></li>
+    <li class="correct"><span class="mark">②</span><p>0.13</p></li>
+    <li><span class="mark">③</span><p>0.15</p></li>
+    <li><span class="mark">④</span><p>0.07</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>97.5% 단측 신뢰 상한 \( = \hat{p} + Z_{\alpha} \cdot SE = 0.10 + 2 \times 0.015 = 0.13 \). 즉 모비율(불량률)은 97.5% 신뢰 수준에서 0.13 이하라고 주장할 수 있다. 품질 기준이 0.13 이상이라면 이 생산라인은 기준을 충족한다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 19</div>
+  <div class="q-title">19. 이진변수 양측 가설검정</div>
+  <div class="q-body"><p>기존 광고의 클릭 전환율이 \( p_0 = 0.65 \)(65%)로 알려져 있다. 새 광고를 \( n = 100 \)명에게 노출한 결과 75명이 클릭하여 \( \hat{p} = 0.75 \), \( SE = \sqrt{{p_0}(1-{p_0})/n} \approx 0.04 \)이다. 유의수준 \( \alpha = 0.05 \)의 양측검정( \( Z_{\alpha/2} = 2 \) )을 수행할 때, 17번에서 구한 95% 신뢰구간 (0.67, 0.83)을 기반으로 한 결론은?</p></div>
+  <ol class="choices">
+    <li><span class="mark">①</span><p>표본이 작아 판단을 유보한다.</p></li>
+    <li class="correct"><span class="mark">②</span><p>95% 신뢰구간이 0.65를 포함하지 않으므로 귀무가설 기각. 새 광고의 전환율이 기존과 유의미하게 다르다.</p></li>
+    <li><span class="mark">③</span><p>95% 신뢰구간이 0을 포함하지 않으므로 귀무가설 기각.</p></li>
+    <li><span class="mark">④</span><p>95% 신뢰구간이 0.65를 포함하므로 귀무가설을 기각하지 못한다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>95% 신뢰구간 (0.67, 0.83)은 귀무가설 값 \( p_0 = 0.65 \)를 포함하지 않는다. 따라서 귀무가설을 기각하며, 새 광고의 클릭 전환율이 기존 광고와 통계적으로 유의미하게 다르다(이 경우 더 높다)고 결론 내린다.</p>
+  </div>
+</div>
+<div class="q">
+  <div class="q-num">QUESTION 20</div>
+  <div class="q-title">20. 이진변수 단측 가설검정</div>
+  <div class="q-body"><p>기존 마케팅 채널의 평균 가입 전환율이 \( p_0 = 0.06 \)(6%)으로 알려져 있다. 새 채널로 유입된 \( n = 400 \)명 중 40명이 가입하여 \( \hat{p} = 0.10 \)으로 관찰되었다. 귀무가설 하에서의 표준오차 \( SE = \sqrt{p_0(1-p_0)/n} = 0.015 \)로 주어진다. "새 채널의 가입 전환율이 기존보다 <b>높다</b>"를 유의수준 \( \alpha = 0.025 \)의 단측검정( \( Z_{\alpha} = 2 \) )으로 검증할 때, 검정통계량과 결론은?</p></div>
+  <ol class="choices">
+    <li class="correct"><span class="mark">①</span><p>\( Z \approx 2.67 \)로 \( Z &gt; 2 \)이므로 귀무가설 기각. 새 채널의 전환율이 기존보다 유의미하게 높다.</p></li>
+    <li><span class="mark">②</span><p>표본 크기가 작아 결론을 유보해야 한다.</p></li>
+    <li><span class="mark">③</span><p>\( Z \approx 0.67 \)로 임계값보다 작으므로 귀무가설을 기각하지 못한다.</p></li>
+    <li><span class="mark">④</span><p>\( Z \approx 2.67 \)이지만 양수이므로 귀무가설을 기각할 수 없다.</p></li>
+  </ol>
+  <div class="feedback">
+    <span class="lbl">해설</span>
+    <p>검정통계량 \( Z = (\hat{p} - p_0) / SE = (0.10 - 0.06) / 0.015 \approx 2.67 \). 단측(상단) 기각역은 \( Z > Z_{\alpha} = 2 \)이다. 관찰된 \( Z \approx 2.67 > 2 \)이므로 기각역 안에 들어간다. 따라서 귀무가설을 기각하고, 새 채널의 가입 전환율이 기존보다 통계적으로 유의미하게 높다고 결론 내린다.</p>
+  </div>
+</div>
+<div class="answer-key">
+  <h3>ANSWER KEY</h3>
+  <div class="grid">
+    <span>01.<b>④</b></span>
+    <span>02.<b>②</b></span>
+    <span>03.<b>①</b></span>
+    <span>04.<b>③</b></span>
+    <span>05.<b>④</b></span>
+    <span>06.<b>③</b></span>
+    <span>07.<b>④</b></span>
+    <span>08.<b>②</b></span>
+    <span>09.<b>④</b></span>
+    <span>10.<b>①</b></span>
+    <span>11.<b>②</b></span>
+    <span>12.<b>①</b></span>
+    <span>13.<b>③</b></span>
+    <span>14.<b>④</b></span>
+    <span>15.<b>①</b></span>
+    <span>16.<b>③</b></span>
+    <span>17.<b>①</b></span>
+    <span>18.<b>②</b></span>
+    <span>19.<b>②</b></span>
+    <span>20.<b>①</b></span>
+  </div>
+</div>
+</section>
+<footer>
+  CHA University · 미래융합대학 AI헬스케어융합학과 · 경영통계 (2026-1, U004109-01)
+</footer>
+</div>
+</body>
+</html>
